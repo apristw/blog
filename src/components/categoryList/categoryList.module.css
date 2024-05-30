@@ -21,6 +21,7 @@
 	width: 15%;
 	height: 80px;
 	justify-content: center;
+	border-radius: 10px;
 }
 
 .category.style {

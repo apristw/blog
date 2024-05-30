@@ -6,7 +6,7 @@ function Featured() {
 	return (
 		<div className={styles.container}>
 			<h1 className={styles.title}>
-				<b className={styles.bold}>Hei Guys,</b> Welcome To My Blog
+				<b className={styles.bold}>Hi Guys,</b> Welcome To My Blog
 			</h1>
 			<div className={styles.post}>
 				<div className={styles.imgContainer}>
