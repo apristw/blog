@@ -3,6 +3,7 @@
 	--textColor: black;
 	--softBg: #f0f0f0;
 	--softTextColor: #626262;
+	--bgBtn: #f0f0f0;
 }
 
 * {
@@ -26,6 +27,7 @@ a {
 	--textColor: #ddd;
 	--softBg: #1f273a;
 	--softTextColor: #a6a6a6;
+	--bgBtn: #f0f0f0;
 }
 
 .container {
@@ -69,4 +71,12 @@ a {
 	.wrapper {
 		max-width: 475px;
 	}
+}
+
+.ql-container {
+	font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before {
+	color: #b3b3b1;
 }
