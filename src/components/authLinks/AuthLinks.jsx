@@ -6,10 +6,8 @@ import { signOut, useSession } from "next-auth/react";
 
 function AuthLinks() {
 	const [opened, setOpened] = useState(false);
+	const { status } = useSession();
 
-	const { data, status } = useSession();
-
-	console.log(data, status);
 	return (
 		<div className={styles.container}>
 			{status === "unauthenticated" ? (
