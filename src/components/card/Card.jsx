@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 function Card({ item, key }) {
+	console.log({ item });
 	return (
 		<div key={key} className={styles.container}>
 			<div className={styles.imgContainer}>
@@ -14,14 +15,13 @@ function Card({ item, key }) {
 					<span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
 					<span className={styles.category}>{item.catSlug}</span>
 				</div>
-				<Link href="/" className={styles.title}>
+				<Link href={`/posts/${item.slug}`} className={styles.title}>
 					<h1>{item.title}</h1>
 				</Link>
-				<p className={styles.desc}>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor fugiat
-					eaque, doloremque ratione facilis aperiam quae odio a assumenda
-					repellendus enim odit, soluta nam.
-				</p>
+				<p
+					className={styles.desc}
+					dangerouslySetInnerHTML={{ __html: item?.desc }}
+				/>
 				<Link href="/" className={styles.link}>
 					Read More
 				</Link>
